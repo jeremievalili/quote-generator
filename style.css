@@ -83,6 +83,13 @@ button:active {
     font-size: 1.5rem;
 }
 
+.whatsapp-button:hover {
+    color: #25D366;
+}
+.fa-whatsapp {
+    font-size: 1.6rem;
+}
+
 
 .loader {
     border: 16px solid #f3f3f3; 

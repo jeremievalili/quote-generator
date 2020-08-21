@@ -2,18 +2,16 @@ const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
+const whatsappBtn = document.getElementById('whatsapp');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
-
-// Show Loading 
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
 
-// Hide loading 
-function complete() {
+function removeLoadingSpinner() {
     if (!loader.hidden) {
         quoteContainer.hidden = false;
         loader.hidden = true;
@@ -21,7 +19,7 @@ function complete() {
 }
 // Get quote from API 
 async function getQuote() {
-    loading()
+    showLoadingSpinner()
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/' 
     const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try {
@@ -42,7 +40,7 @@ async function getQuote() {
         }
         quoteText.innerHTML = data.quoteText;
         // Stop Loader, Show Quote
-        complete();
+        removeLoadingSpinner();
        
     } catch (error) {
         getQuote();
@@ -57,9 +55,17 @@ function tweetQuote() {
     window.open(twitterUrl, '_blank');
 }
 
+// Share on whatsapp
+function shareOnWhatsapp() {
+    const quote = quoteText.innerText;
+    const author = authorText.innerText;
+    const whatsappUrl = `whatsapp://send?text=${quote} - ${author}`;
+    window.open(whatsappUrl, '_blank');
+}
 // Button functions
 newQuoteBtn.addEventListener('click', getQuote);
 twitterBtn.addEventListener('click', tweetQuote);
+whatsappBtn.addEventListener('click', shareOnWhatsapp);
 
 // On Load
 getQuote()
