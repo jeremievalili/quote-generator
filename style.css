@@ -86,7 +86,14 @@ button:active {
     color: #25D366;
 }
 .fa-whatsapp {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+}
+
+.facebook-button:hover {
+    color: #3B5998;
+}
+.fa-facebook {
+    font-size: 1.5rem;
 }
 
 
@@ -112,6 +119,26 @@ button:active {
     }
 
     .quote-text {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
+    .twitter-button {
+        color: #38a1f3;
+    }
+    .whatsapp-button {
+        color: #25D366;
+    }
+    .facebook-button {
+        color: #3B5998;
+    }
+    .fa-facebook {
+        font-size: 1.5rem;
+    }
+
+    #new-quote {
+        height: 1.3rem;
+        font-size: 1rem;
+        padding: 1rem 1rem;
+        padding-bottom: 3rem;
+    }
+    
 }

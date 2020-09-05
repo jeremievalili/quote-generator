@@ -3,6 +3,7 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const whatsappBtn = document.getElementById('whatsapp');
+const facebookBtn = document.getElementById('facebook');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
@@ -62,10 +63,21 @@ function shareOnWhatsapp() {
     const whatsappUrl = `whatsapp://send?text=${quote} - ${author}`;
     window.open(whatsappUrl, '_blank');
 }
+
+// Share on whatsapp
+function shareOnFacebook() {
+    const quote = quoteText.innerText;
+    const author = authorText.innerText;
+  //  const facebookUrl = `https://developers.facebook.com/docs/plugins/?text=${quote} - ${author}`;
+    const facebookUrl =`https://www.facebook.com/sharer/sharer.php?send?text=${quote}`
+  window.open(facebookUrl, '_blank');
+}
+
 // Button functions
 newQuoteBtn.addEventListener('click', getQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 whatsappBtn.addEventListener('click', shareOnWhatsapp);
+facebookBtn.addEventListener('click', shareOnFacebook);
 
 // On Load
 getQuote()
