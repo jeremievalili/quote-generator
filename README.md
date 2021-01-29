@@ -1,5 +1,8 @@
 # quote-generator
 
+Update 2021: MyQuotes
+Change the design and create a logo for the web app
+
 A Javascript application to generate somes beautiful quotes ^-^ with the API of https://forismatic.com/en/
 
 Sometimes the loading can take time. Please be patient until the quote appear.
