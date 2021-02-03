@@ -18,7 +18,19 @@ function removeLoadingSpinner() {
         loader.hidden = true;
     }
 }
-// Get quote from API 
+
+//Get Quote from CHUCK API
+/*async function getChuckQuote () {
+    showLoadingSpinner()
+    const proxyChuckUrl =
+    const apiChuckUrl = 'https://api.chucknorris.io/jokes/random';
+    try {
+        const response = await fetch(apiChuckUrl);
+        const data = await response.json();
+
+    }
+} */
+// Get quote from forismatic API 
 async function getQuote() {
     showLoadingSpinner()
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/' 
