@@ -36,6 +36,18 @@ body {
     top: 50px;
     left: 50px;
 }
+
+/* Simpsons Quotes */
+.btn-simpsons {
+    background-color: yellow;
+    color: #000000;
+}
+
+/* Chuck Norris Quotes */
+.btn-chuckN {
+    color: tomato;
+}
+
 .quote-text {
     font-size: 2.75rem;
 }
